@@ -32,3 +32,10 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: VSTest@2
+  inputs:
+    testSelector: 'testRun'
+    searchFolder: '.src/PokerLeagueManager.UI.Web/BuildAngular.bat'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
